@@ -1,0 +1,378 @@
+// Home
+.hero {
+	background: $black url('../img/hero-bg.jpg') no-repeat center center/cover;
+	color: $white;
+	padding: 6rem 0;
+	position: relative;
+	.vertical-angle {
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    height: 100%;
+	    width: 65%;
+	    bottom: 0;
+	    opacity: .85;
+	    overflow: hidden;
+	    path {
+	    	fill: $black;
+	    }
+	}
+	.hs_cos_wrapper_type_rich_text {
+		display: block;
+		max-width: 38em;
+		@include bp(lg) {
+			max-width: 46em;
+		}
+		position: relative;
+		z-index: 1;
+	}
+	h1 {
+		font-size: 2.25rem;
+		@include bp(sm) {
+			font-size: 2.75rem;
+		}
+		@include bp(lg) {
+			font-size: 3.5rem;
+		}
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		line-height: 1;
+	}
+	.hs-image-widget {
+		display: none;
+		@include bp(md) {
+			display: block;
+			margin: 0;
+		    position: absolute;
+		    top: 0;
+		    right: 0;
+		    z-index: 1;
+		}
+	}
+}
+
+.featured-industries > span {
+    display: flex;
+    flex-wrap: wrap;
+    > div {
+    	width: 100%;
+    	@include bp(md) {
+		    width: 50%;
+		}
+	}
+}
+
+.featured-industry-module {
+	background-color: $blue;
+	color: white;
+	height: 100%;
+	p, h2 {
+		margin: 0 0 .5rem;
+	}
+	.row-fluid {
+		height: 100%;
+		@include bp(sm) {
+			display: flex;
+		}
+	}
+	.span5 {
+		padding: 2rem 1rem .5rem 1rem;
+		position: relative;
+		z-index: 1;
+		@include bp(sm) {
+			max-width: 400px;
+			margin-left: auto !important;
+			padding: 2rem 0 2rem 2rem;
+		}
+		> *:first-child {
+			margin-top: 0;
+		}
+		> *:last-child {
+			margin-bottom: 0;
+		}
+	}
+	.span7 {
+		position: relative;
+	    background-blend-mode: multiply;
+	    background-size: cover;
+	    background-position: center;
+	    background-color: $blue;
+	    display: flex;
+		align-items: center;
+		justify-content: center;
+		min-height: 100px !important;
+		p {
+			position: relative;
+			z-index: 1;
+			margin: 0;
+		}
+		&:before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(to bottom, transparentize($blue, 0) 0%, transparentize($blue, 1) 100%);
+			@include bp(sm) {
+			    transform: skewX(-10deg);
+	    		left: -2rem;
+				background: linear-gradient(to right, transparentize($blue, 0) 12%, transparentize($blue, 1) 85%);
+			}
+		}
+	}
+	&.yellow {
+		background-color: $yellow;
+		.span7 {
+			background-color: $yellow;
+			&:before {
+				background: linear-gradient(to bottom, transparentize($yellow, 0) 0%, transparentize($yellow, 1) 100%);
+				@include bp(sm) {
+					background: linear-gradient(to right, transparentize($yellow, 0) 12%, transparentize($yellow, 1) 85%);
+				}
+			}
+		}
+	}
+	&.purple {
+		background-color: $purple;
+		.span7 {
+			background-color: $purple;
+			&:before {
+				background: linear-gradient(to bottom, transparentize($purple, 0) 0%, transparentize($purple, 1) 100%);
+				@include bp(sm) {
+					background: linear-gradient(to right, transparentize($purple, 0) 12%, transparentize($purple, 1) 85%);
+				}
+			}
+		}
+	}
+	&.green {
+		background-color: $green;
+		.span7 {
+			background-color: $green;
+			&:before {
+				background: linear-gradient(to bottom, transparentize($green, 0) 0%, transparentize($green, 1) 100%);
+				@include bp(sm) {
+					background: linear-gradient(to right, transparentize($green, 0) 12%, transparentize($green, 1) 85%);
+				}
+			}
+		}
+	}
+	&.grey {
+		background-color: $dark-grey;
+		.span7 {
+			background-color: $dark-grey;
+			&:before {
+				background: linear-gradient(to bottom, transparentize($dark-grey, 0) 0%, transparentize($dark-grey, 1) 100%);
+				@include bp(sm) {
+					background: linear-gradient(to right, transparentize($dark-grey, 0) 12%, transparentize($dark-grey, 1) 85%);
+				}
+			}
+		}
+	}
+	&.orange {
+		background-color: $orange;
+		.span7 {
+			background-color: $orange;
+			&:before {
+				background: linear-gradient(to bottom, transparentize($orange, 0) 0%, transparentize($orange, 1) 100%);
+				@include bp(sm) {
+					background: linear-gradient(to right, transparentize($orange, 0) 12%, transparentize($orange, 1) 85%);
+				}
+			}
+		}
+	}
+	&.red {
+		background-color: $red;
+		.span7 {
+			background-color: $red;
+			&:before {
+				background: linear-gradient(to bottom, transparentize($red, 0) 0%, transparentize($red, 1) 33%);
+				@include bp(sm) {
+					background: linear-gradient(to right, transparentize($red, 0) 12%, transparentize($red, 1) 85%);
+				}
+			}
+		}
+	}
+	img {
+		object-fit: cover;
+		width: 100%;
+		height: 100%;
+		max-width: none;
+	}
+}
+
+.spotlight-banner-wrapper {
+	.page-wrap {
+		padding: 0;
+	}
+}
+.spotlight-banner {
+	background-size: cover;
+	background-position: left center;
+	padding: 4rem 3rem;
+	color: $white;
+}
+
+.customer-logos {
+	text-align: center;
+	background: #eee;
+	.page-wrap {
+		padding-top: 3rem;
+		padding-bottom: 3rem;
+		background: white;
+	}
+	.hs_cos_wrapper_widget_container {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		> div {
+			margin: 1rem;
+		}
+	}
+}
+
+.featured-products {
+	padding: 1.5rem 0 3rem 0;
+	text-align: center;
+	background: $blue;
+	color: $white;
+	position: relative;
+	.hs_cos_wrapper_widget_container {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		position: relative;
+		z-index: 1;
+		> div {
+			margin: 1rem;
+		}
+	}
+	svg {
+		position: absolute;
+		left: 0;
+		bottom: calc(4rem - 1px);
+		width: 100%;
+		height: auto;
+	}
+	&:after {
+		content: "";
+		display: block;
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		width: 100%;
+		height: 4rem;
+		background: white;
+	}
+}
+
+.featured-product-module {
+	border-radius: .5rem;
+	overflow: hidden;
+	a {
+	    position: relative;
+	    display: block;
+	    &:hover,
+	    &:focus {
+	    	h4:after {
+				transform: scale(1.5);
+	    	}
+	    }
+	}
+	h4 {
+	    position: absolute;
+	    bottom: 0;
+	    left: 0;
+	    margin: 0;
+	    width: 100%;
+	    text-align: center;
+	    padding-top: 1rem;
+	    padding-bottom: 1rem;
+	    color: white;
+	    z-index: 1;
+	    &:after {
+		    content: "";
+		    display: block;
+		    position: absolute;
+		    bottom: 0;
+		    left: 0;
+		    right: 0;
+		    width: 100%;
+		    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.5) 100%);
+		    height: 100%;
+		    transform: scale(1);
+		    transition: transform 200ms ease;
+		    z-index: -1;
+		}
+	}
+}
+
+.customer-testimonials {
+	background: #eee url('../img/light-bg.jpg') no-repeat center center/cover;
+	padding: 6rem 0;
+	.hs_cos_wrapper_type_custom_widget {
+		width: 100%;
+		padding: 0 4rem;
+	}
+}
+
+.customer-testimonials {
+	.flickity-page-dots {
+		bottom: 5rem;
+		left: 0;
+	}
+}
+
+.testimonial-module {
+	width: 100%;
+	background: $white;
+	position: relative;
+	max-width: 780px;
+	margin: 2rem auto;
+	box-shadow: 0 0 27px 4px transparentize(#464646, .83);
+	&-circle {
+	    position: absolute;
+	    width: 4rem;
+	    height: 4rem;
+	    display: flex;
+	    align-items: center;
+	    justify-content: center;
+	    background: $blue;
+	    border-radius: 2rem;
+	    font-size: 3.5rem;
+	    color: white;
+	    top: -2rem;
+	    left: -2rem;
+	}
+	.span4 {
+		border-bottom: .5rem solid $blue;
+		text-align: center;
+		background-size: cover;
+    	background-position: center;
+	}
+	cite {
+		display: block;
+		text-align: right;
+		font-size: .815rem;
+	}
+}
+
+.mat-experts {
+	.row-fluid {
+		display: flex;
+		flex-wrap: wrap;
+		.span4 {
+			order: 2;
+		}
+		@include bp(sm) {
+			align-items: center;
+			.span4 {
+				order: 0;
+			}
+		}
+	}
+}
+
+

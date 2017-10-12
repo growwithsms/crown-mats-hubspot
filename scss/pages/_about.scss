@@ -1,0 +1,26 @@
+// About Page
+.who-we-are {
+	&-header {
+		background: $blue;
+		color: $white;
+		text-align: center;
+		padding: 2rem 0 0;
+	}
+	&-team {
+		> span {
+			display: flex;
+			> div {
+				margin: 2rem;
+				@include bp(sm) {
+					margin: -8rem 2rem 0;
+				}
+			}
+		}
+	}
+}
+
+.team-member-module-name {
+    text-align: center;
+    padding-bottom: .5rem;
+    border-bottom: .25rem solid $yellow;
+}

@@ -1,0 +1,111 @@
+
+// Mobile Nav Trigger
+.menu-toggle {
+    border: none;
+    border-radius: 0;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    padding: 1rem 1.5rem;
+    text-transform: uppercase;
+    transition: all 0.25s ease-in-out;
+    font-size: 0.875rem;
+    padding: 1rem;
+    float: right;
+    margin-top: 1rem;
+    margin-right: 1rem;
+    @include bp(sm) {
+        display: none;
+    }
+}
+
+.icon-menu-toggle {
+    width: 2rem;
+    height: 2rem;
+    top: 0;
+    vertical-align: middle;
+    position: relative; /* Align more nicely with capital letters */
+}
+
+/* Animate menu icon (lines). */
+.svg-menu-toggle {
+    .line {
+        opacity: 1;
+        transform: rotate(0) translateY(0) translateX(0);
+        transform-origin: 1rem 1rem;
+        transition: transform 0.3s ease-in-out, opacity 0.2s ease-in-out;
+    }
+    .line-1 {
+        transform-origin: 1rem 2.5rem;
+    }
+    .line-3 {
+        transform-origin: 1rem 4rem;
+    }
+}
+
+.menu-toggle.opened .svg-menu-toggle {
+    .line-1 {
+        transform: rotate(45deg) translateY(0) translateX(0);
+    }
+    .line-2 {
+        opacity: 0;
+    }
+    .line-3 {
+        transform: rotate(-45deg) translateY(0em) translateX(0em);
+    }
+}
+
+// Desktop Navigation
+.global-header {
+    overflow: hidden;
+    .menu-toggle.opened ~ {
+        .hs-menu-wrapper {
+            margin-top: 1rem;
+            max-height: 320px;
+        }
+    }
+    .hs-menu-wrapper {
+        transition: all 200ms ease;
+        margin-top: 0;
+        max-height: 0;
+        @include bp(sm) {
+            margin-top: 1.5rem;
+            max-height: none;
+            font-size: .75rem;
+        }
+        @include bp(lg) {
+            font-size: 1rem;
+        }
+        a {
+            display: block;
+            margin: .5rem 0;
+            @include bp(sm) {
+                border-bottom: .33rem solid $white;
+                margin: .5rem .75rem;
+            }
+            padding: .25rem;
+            color: $black;
+            &:hover,
+            &:focus {
+                color: $blue;
+                border-color: $blue;
+            }
+        }
+        .hs-menu-depth-1:last-child {
+            a {
+                @extend .button;
+                @include bp(sm) {
+                    margin-left: 1rem;
+                    border: 0 none;
+                    text-align: center;
+                }
+                &:hover,
+                &:focus {
+                    background: $blue;
+                    color: $white;
+                }
+            }
+        }
+    }
+}
