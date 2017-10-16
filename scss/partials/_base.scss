@@ -51,7 +51,7 @@ table {
 // Main Site Content
 // ---
 .page-header {
-    background: $blue;
+    background: $blue url('../img/blue-bg.jpg') no-repeat center center/cover;
     color: $white;
     padding: 2rem 0;
     .secondary-header {

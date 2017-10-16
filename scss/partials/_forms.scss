@@ -10,12 +10,15 @@ label {
     display: inline-block;
     max-width: 100%;
     margin-bottom: 2px;
-    font-weight: 700;
     font-size: 15px;
 }
 
 .hs-form-required {
     padding: 0 3px;
+}
+
+.hs-form-field {
+    margin-bottom: 1rem;
 }
 
 .hs-error-msgs {
@@ -25,8 +28,10 @@ label {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
     opacity: 0.9;
-    margin-top: 0 !important;
     text-align: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
     label {
         font-weight: normal;
         font-size: .75rem;
@@ -56,13 +61,12 @@ body select {
     width: 100%;
     font-family: inherit;
     display: block;
-    margin: 0 0 15px;
-    min-height: 34px;
-    padding: 6px 12px;
-    font-size: 14px;
-    line-height: 1.42857;
+    min-height: 2rem;
+    padding: .5rem .825rem;
+    font-size: .825rem;
+    line-height: 1.5;
     color: #555;
-    background-color: #FFF;
+    background-color: #fff;
     background-image: none;
     border: 1px solid rgba(204, 204, 204, 0.8);
     border-radius: 4px;
