@@ -92,18 +92,29 @@
                 border-color: $blue;
             }
         }
-        .hs-menu-depth-1:last-child {
-            a {
-                @extend .button;
-                @include bp(sm) {
-                    margin-left: 1rem;
-                    border: 0 none;
-                    text-align: center;
-                }
-                &:hover,
-                &:focus {
-                    background: $blue;
-                    color: $white;
+        .hs-menu-depth-1 {
+            &.active {
+                a {
+                    border-color: $yellow;
+                    &:hover,
+                    &:focus {
+                        border-color: $blue;
+                    }
+                } 
+            }
+            &:last-child {
+                a {
+                    @extend .button;
+                    @include bp(sm) {
+                        margin-left: 1rem;
+                        border: 0 none;
+                        text-align: center;
+                    }
+                    &:hover,
+                    &:focus {
+                        background: $blue;
+                        color: $white;
+                    }
                 }
             }
         }

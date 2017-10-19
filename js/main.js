@@ -30,16 +30,30 @@ mobileNavTrigger.onclick = function() {
 };
 
 
-// jquery document ready
-$(function() {
+/////////////////////////
+// Home Page
+/////////////////////////
 
-    // home page slider
-    $('.customer-testimonials').flickity({
-        // options
-        cellAlign: 'center',
-        contain: true,
-        cellSelector: '.hs_cos_wrapper_type_custom_widget',
-        imagesLoaded: true
-    });
+// home page slider
+$('.customer-testimonials').flickity({
+    // options
+    cellAlign: 'center',
+    contain: true,
+    cellSelector: '.hs_cos_wrapper_type_custom_widget',
+    imagesLoaded: true
+});
+
+
+/////////////////////////
+// Contact Page 
+/////////////////////////
+$('.locate-representative-states select').on('change', function(){
+    
+    var $currentState = "#hs_cos_wrapper_" + $(this).val();
+
+    $('.locate-representative-content > span.active').removeClass('active').addClass('deactivated');
+
+    $($currentState).removeClass('deactivated').addClass('active');
 
 });
+

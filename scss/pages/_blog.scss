@@ -114,11 +114,19 @@
     }
     .hs_cos_wrapper_type_cta {
         display: block;
-        border: 2px solid $white;
+        border: 1px solid $white;
         border-radius: 5px;
         background-color: $white;
         box-shadow: 0px 0px 38px 6px rgba(0, 0, 0, 0.1);
         margin-bottom: 3rem;
+        span,
+        a {
+            display: block;
+        }
+        img {
+            display: block;
+            border-radius: 4px;
+        }
     }
 }
 
@@ -162,6 +170,18 @@
 }
 
 .blog-post {
+    .page-content {
+        .row-fluid {
+            display: flex;
+            flex-wrap: wrap;
+            @include bp(sm) {
+                display: block;   
+            }
+            .blog-sidebar {
+                order: 2;
+            }
+        }
+    }
     .page-header {
         min-height: 300px;
         background-blend-mode: multiply;
@@ -173,9 +193,7 @@
         background-color: $white;
         box-shadow: 0px 0px 38px 6px rgba(0, 0, 0, 0.1);
         margin-bottom: 3rem;
-        @include bp(sm) {
-            margin-top: -9rem;
-        }
+        margin-top: -9rem;
     }
 }
 
