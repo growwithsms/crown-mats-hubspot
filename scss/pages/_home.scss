@@ -240,8 +240,9 @@
 	color: $white;
 	position: relative;
 	.hs_cos_wrapper_widget_container {
-		display: flex;
-		flex-wrap: wrap;
+		@include bp(md) {
+			display: flex;
+		}
 		justify-content: center;
 		position: relative;
 		z-index: 1;

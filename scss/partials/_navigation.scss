@@ -59,6 +59,9 @@
 // Desktop Navigation
 .global-header {
     overflow: hidden;
+    @include bp(sm) {
+        overflow: initial;
+    }
     .menu-toggle.opened ~ {
         .hs-menu-wrapper {
             margin-top: 1rem;
@@ -80,6 +83,7 @@
         a {
             display: block;
             margin: .5rem 0;
+            font-size: 15px !important;
             @include bp(sm) {
                 border-bottom: .33rem solid $white;
                 margin: .5rem .75rem;
@@ -93,8 +97,8 @@
             }
         }
         .hs-menu-depth-1 {
-            &.active {
-                a {
+            &.active-branch {
+                > a {
                     border-color: $yellow;
                     &:hover,
                     &:focus {
@@ -117,6 +121,23 @@
                     }
                 }
             }
+        }
+        .hs-menu-depth-2 {
+            &.hs-item-has-children:before {
+                content: '';
+                position: absolute;
+                left: 2px;
+                top: 11px;
+                border-left: 6px solid #0079c2;
+                border-top: 5px solid transparent;
+                border-bottom: 5px solid transparent;
+            }
+        }
+        .hs-menu-children-wrapper {
+            background: white;
+            min-width: 150px;
+            padding-left: .5rem;
+            padding-right: .5rem;
         }
     }
 }

@@ -17,11 +17,12 @@
         @include bp(sm) {
             flex-wrap: nowrap;
         }
-        align-items: center;
     }
     .post-image-header {
         position: relative;
         overflow: hidden;
+        display: flex;
+        align-items: center;
         img {
             position: absolute;
             height: 100%;

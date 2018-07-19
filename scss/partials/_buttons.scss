@@ -10,7 +10,7 @@ input[type="submit"] {
 	border: 0 none;
 	font-family: "Montserrat", sans-serif;
 	font-weight: 600;
-	font-size: 100%;
+	font-size: 1em;
 	&:hover,
 	&:focus {
 		background-color: lighten($yellow, 15%);
