@@ -33,8 +33,6 @@ mobileNavTrigger.onclick = function() {
 /////////////////////////
 // Home Page
 /////////////////////////
-
-// home page slider
 $('.customer-testimonials').flickity({
     // options
     cellAlign: 'center',
@@ -42,7 +40,6 @@ $('.customer-testimonials').flickity({
     cellSelector: '.hs_cos_wrapper_type_custom_widget',
     imagesLoaded: true
 });
-
 
 /////////////////////////
 // Contact Page 
@@ -57,3 +54,9 @@ $('.locate-representative-states select').on('change', function(){
 
 });
 
+/////////////////////////
+// Product Listing Page 
+/////////////////////////
+$('.sidebar-widget-button').on('click', function(){
+    $(this).parent().toggleClass('collapsed');
+});
