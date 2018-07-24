@@ -58,7 +58,7 @@ body input[type="color"],
 body input[type="file"],
 body textarea,
 body select {
-    width: 100%;
+    width: 100% !important;
     font-family: inherit;
     display: block;
     min-height: 2rem;

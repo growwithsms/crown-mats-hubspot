@@ -8,12 +8,6 @@
 // General
 /////////////////////////
 
-// remove no-js from html tag
-document.documentElement.className = document.documentElement.className.replace(
-    "no-js",
-    "js"
-);
-
 // mobile menu
 var mobileNavTrigger = document.getElementById("menu-toggle");
 
@@ -63,4 +57,39 @@ $(".sidebar-widget-button").on("click", function() {
     $(this)
         .parent()
         .toggleClass("collapsed");
+});
+
+/////////////////////////
+// Product Page
+/////////////////////////
+
+// product thumbnails
+$('.more-images a').on('click', function(e){
+    e.preventDefault();
+    var image_src = $(this).attr('href');
+    $("#main-image").attr('src', image_src);
+    $("#main-image").parent().attr('href', image_src);
+});
+
+// request a sample modal
+$('.modal-trigger').on('click', function(e){
+    e.preventDefault();
+    var modal_id = $(this).attr('href');
+    $(modal_id).show();
+});
+$('.close').on('click', function(){
+    $(this).parent().parent().hide();
+});
+
+// specification tabs
+$('.tab a').on('click', function(e) {
+    e.preventDefault();
+
+    $('.tab a').removeClass('active');
+    $(this).addClass('active');
+
+    $('.tabcontent').removeClass('visible');
+    var tab_id = $(this).attr('href');
+    $(tab_id).addClass('visible');
+
 });

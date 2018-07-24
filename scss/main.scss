@@ -2,6 +2,7 @@
 @import "vendor/flickity";
 @import "vendor/layout";
 @import "vendor/icomoon-icons";
+@import "vendor/circles";
 
 // Utility
 @import "utilities/variables";
@@ -25,6 +26,7 @@
 @import "pages/about";
 @import "pages/contact";
 @import "pages/product-listing";
+@import "pages/product-details";
 
 // Shameful styles that need to be organized or deleted...
 @import "shame";
