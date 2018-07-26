@@ -49,7 +49,9 @@ $(document).ready(function() {
         contain: true,
         imagesLoaded: true,
         pageDots: false,
-        prevNextButtons: false
+        prevNextButtons: false,
+        autoPlay: true,
+        wrapAround: true
     });
 
     /////////////////////////
