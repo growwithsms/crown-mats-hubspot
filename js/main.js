@@ -3,6 +3,7 @@
 /////////////////////////
 
 //@prepros-prepend vendor/flickity.pkgd.min.js
+//@prepros-prepend vendor/jquery.dynatable.js
 
 $(document).ready(function() {
     /////////////////////////
@@ -114,4 +115,6 @@ $(document).ready(function() {
         var tab_id = $(this).attr("href");
         $(tab_id).addClass("visible");
     });
+
+    $('#cross-table').dynatable();
 });

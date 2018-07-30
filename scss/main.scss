@@ -3,6 +3,7 @@
 @import "vendor/layout";
 @import "vendor/icomoon-icons";
 @import "vendor/circles";
+@import "vendor/dynatable";
 
 // Utility
 @import "utilities/variables";
@@ -27,6 +28,3 @@
 @import "pages/contact";
 @import "pages/product-listing";
 @import "pages/product-details";
-
-// Shameful styles that need to be organized or deleted...
-@import "shame";
