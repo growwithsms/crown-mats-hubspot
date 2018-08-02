@@ -5,7 +5,7 @@ label {
     display: inline-block;
     max-width: 100%;
     margin-bottom: 2px;
-    font-size: 15px;
+    font-size: 16px;
 }
 
 .hs-form-required {
@@ -33,6 +33,24 @@ label {
     }
 }
 
+.inputs-list {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+}
+
+.hs-form-radio {
+    display: inline-block;
+    margin-right: 1rem;
+    margin-bottom: .5rem;
+}
+
+.hs-form-radio-display span {
+    display: inline-block;
+    margin-left: .25rem;
+    line-height: 1.2;
+    font-size: 14px;
+}
 
 /* One Line Inputs */
 
@@ -58,11 +76,10 @@ body select {
     display: block;
     min-height: 2rem;
     padding: .5rem .825rem;
-    font-size: .825rem;
+    font-size: 16px;
     line-height: 1.5;
     color: #555;
     background-color: #fff;
-    background-image: none;
     border: 1px solid rgba(204, 204, 204, 0.8);
     border-radius: 4px;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset;
@@ -85,7 +102,16 @@ input:focus:invalid:not(:placeholder-shown)::not(input[type="submit"]) {
     border-color: $yellow !important;
 }
 
-
+select {
+    background-image: url("../img/sort.svg");
+    background-position: calc(100% - 0.5rem) center;
+    background-size: 0.6rem 1rem;
+    background-repeat: no-repeat;
+    appearance: none;
+    &::-ms-expand {
+        display: none;
+    }
+}
 
 
 /* Blog Subscription Form

@@ -52,18 +52,22 @@ table {
     float: none;
     padding-right: 1rem;
     padding-left: 1rem;
+    &--small {
+        max-width: $screen-sm;
+    }
 }
 
 .blue {
     background-color: #0079c2;
     padding: 1rem 2rem;
     margin-bottom: 1rem;
+    color: white;
     a {
         color: white;
         &:hover,
         &:focus {
-            color: white;
-            text-decoration: underline;
+            color: $yellow;
+            text-decoration: none;
         }
     }
 }
