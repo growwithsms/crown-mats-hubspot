@@ -4,6 +4,7 @@
 
 //@prepros-prepend vendor/flickity.pkgd.min.js
 //@prepros-prepend vendor/jquery.dynatable.js
+//@prepros-prepend vendor/jquery.magnific-popup.min.js
 
 $(document).ready(function() {
     /////////////////////////
@@ -82,13 +83,41 @@ $(document).ready(function() {
     /////////////////////////
 
     // product thumbnails
-    $(".more-images a").on("click", function(e) {
-        e.preventDefault();
-        var image_src = $(this).attr("href");
-        $("#main-image").attr("src", image_src);
-        $("#main-image")
-            .parent()
-            .attr("href", image_src);
+    $(".more-images a").magnificPopup({
+        type: "image",
+        gallery: {
+            enabled: true
+        }
+    });
+    $(".more-colors-gallery__black").magnificPopup({
+        type: "image",
+        gallery: {
+            enabled: true
+        }
+    });
+    $(".more-colors-gallery__blue").magnificPopup({
+        type: "image",
+        gallery: {
+            enabled: true
+        }
+    });
+    $(".more-colors-gallery__brown").magnificPopup({
+        type: "image",
+        gallery: {
+            enabled: true
+        }
+    });
+    $(".more-colors-gallery__green").magnificPopup({
+        type: "image",
+        gallery: {
+            enabled: true
+        }
+    });
+    $(".more-colors-gallery__red").magnificPopup({
+        type: "image",
+        gallery: {
+            enabled: true
+        }
     });
 
     // request a sample modal
@@ -116,5 +145,5 @@ $(document).ready(function() {
         $(tab_id).addClass("visible");
     });
 
-    $('#cross-table').dynatable();
+    $("#cross-table").dynatable();
 });

@@ -138,6 +138,10 @@
             min-width: 150px;
             padding-left: .5rem;
             padding-right: .5rem;
+            display: none;
+            @include bp(sm) {
+                display: block;
+            }
         }
     }
 }
